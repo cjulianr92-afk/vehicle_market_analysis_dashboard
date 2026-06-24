@@ -1,20 +1,71 @@
-# sprint_7_project
-Sprint 7 Project
-# Análisis de vehículos usados
+# Vehicle Market Analysis Dashboard
 
-Esta aplicación web fue creada con Streamlit para explorar un conjunto de datos de anuncios de vehículos usados en Estados Unidos.
+# Project Overview
 
-La aplicación permite visualizar información del dataset mediante gráficos interactivos creados con Plotly Express.
+This project is an interactive web application built with Streamlit for exploring and visualizing data from used vehicle listings in the United States.
 
-## Funcionalidades
+The dashboard allows users to analyze vehicle information through interactive visualizations and gain insights into mileage and pricing trends within the dataset.
 
-- Cargar el dataset vehicles_us.csv.
-- Mostrar un histograma de la columna odometer.
-- Mostrar un gráfico de dispersión entre odometer y price.
+# Features
 
-## Tecnologías utilizadas
+* Interactive dashboard built with Streamlit.
+* Histogram visualization of vehicle mileage (odometer).
+* Scatter plot showing the relationship between vehicle mileage and price.
+* Simple and user-friendly interface.
+* Interactive charts powered by Plotly Express.
 
-- Python
-- Pandas
-- Plotly Express
-- Streamlit
+# Dataset
+
+The dataset contains information about used vehicles listed for sale in the United States, including:
+
+* Price
+* Model year
+* Vehicle model
+* Condition
+* Fuel type
+* Mileage (odometer)
+* Transmission
+* Vehicle type
+
+# Technologies Used
+
+* Python
+* Pandas
+* Plotly Express
+* Streamlit
+* Jupyter Notebook
+* Git & GitHub
+
+# Project Structure
+
+project/
+│
+├── notebooks/
+│   └── EDA.ipynb
+│
+├── app.py
+├── requirements.txt
+├── vehicles_us.csv
+└── README.md
+
+# Running the Application
+
+1. Clone the repository:
+
+git clone <repository-url>
+
+2. Install dependencies:
+
+pip install -r requirements.txt
+
+3. Run the Streamlit application:
+
+streamlit run app.py
+
+# Author
+
+Cristian Julian Rodriguez Valbuena
+
+Electronic Engineering Student | Data Analyst in Training
+
+Montreal, Quebec, Canada
