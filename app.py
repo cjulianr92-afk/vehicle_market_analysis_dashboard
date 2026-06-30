@@ -56,3 +56,31 @@ year_range = st.sidebar.slider(
     max_year,
     (min_year, max_year)
 )
+
+filtered_data = car_data[
+    (car_data["model_year"] >= year_range[0]) &
+    (car_data["model_year"] <= year_range[1])
+]
+
+st.subheader("Dataset Preview")
+st.dataframe(filtered_data.head())
+
+st.subheader("Vehicle Mileage Distribution")
+fig_hist = px.histogram(
+    filtered_data,
+    x="odometer",
+    nbins=50,
+    title="Distribution of Vehicle Mileage"
+)
+st.plotly_chart(fig_hist, use_container_width=True)
+
+st.subheader("Price vs Mileage")
+fig_scatter = px.scatter(
+    filtered_data,
+    x="odometer",
+    y="price",
+    color="type",
+    title="Vehicle Price vs Mileage",
+    labels={"odometer": "Mileage", "price": "Price"}
+)
+st.plotly_chart(fig_scatter, use_container_width=True)
